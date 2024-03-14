@@ -5,12 +5,8 @@ using UnityEngine;
 public class WeaponContoller : MonoBehaviour
 {
     public GameObject prefab;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform holsterTransform;
+    public float holsterPaddingY;
 
     // Update is called once per frame
     void Update()
@@ -18,10 +14,8 @@ public class WeaponContoller : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             // Instantiate a prefab in 2d space at the transform of the parent
-            Vector3 newPosition = new Vector3(400f, transform.position.y + 300.0f, transform.position.z);
+            Vector3 newPosition = new Vector3(holsterTransform.position.x, holsterTransform.position.y + holsterPaddingY, transform.position.z);
             Instantiate(prefab, newPosition, transform.rotation, transform);
-            // clone.transform.position = transform.position;
-            // Debug.Log(clone.transform.position);
         }
     }
 }

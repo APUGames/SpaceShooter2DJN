@@ -376,8 +376,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1745359266}
   - {fileID: 908328820}
+  - {fileID: 1745359266}
   m_Father: {fileID: 351853498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &690549091
@@ -420,6 +420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 7781831890560092050, guid: 58e5eb4c667cdb7498ecbf7b1aa3de50, type: 3}
+  holsterTransform: {fileID: 908328820}
+  holsterPaddingY: 45
 --- !u!1 &701622273
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +502,7 @@ GameObject:
   - component: {fileID: 908328822}
   - component: {fileID: 908328821}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Holster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -522,7 +524,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 594.2491, y: 345.2512}
+  m_AnchoredPosition: {x: 421, y: 275}
   m_SizeDelta: {x: 68.4982, y: 59.4976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &908328821
@@ -791,7 +793,7 @@ GameObject:
   - component: {fileID: 1745359268}
   - component: {fileID: 1745359267}
   m_Layer: 5
-  m_Name: Image
+  m_Name: PlayerImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
