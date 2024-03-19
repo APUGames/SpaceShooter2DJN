@@ -14,8 +14,9 @@ public class WeaponContoller : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             // Instantiate a prefab in 2d space at the transform of the parent
-            Vector3 newPosition = new Vector3(holsterTransform.position.x, holsterTransform.position.y + holsterPaddingY, transform.position.z);
-            Instantiate(prefab, newPosition, transform.rotation, transform);
+            // Create a Quaternion that rotates on the Z by 90.0f
+            Quaternion quaternion = Quaternion.Euler(0f, 0f, 90.0f);
+            Instantiate(prefab, holsterTransform.position, quaternion);
         }
     }
 }
