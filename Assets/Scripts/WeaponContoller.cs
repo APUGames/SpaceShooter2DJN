@@ -5,8 +5,7 @@ using UnityEngine;
 public class WeaponContoller : MonoBehaviour
 {
     public GameObject prefab;
-    public Transform holsterTransform;
-    public float holsterPaddingY;
+    public Transform rifleTransform;
 
     // Update is called once per frame
     void Update()
@@ -15,8 +14,8 @@ public class WeaponContoller : MonoBehaviour
         {
             // Instantiate a prefab in 2d space at the transform of the parent
             // Create a Quaternion that rotates on the Z by 90.0f
-            Quaternion quaternion = Quaternion.Euler(0f, 0f, 90.0f);
-            Instantiate(prefab, holsterTransform.position, quaternion);
+            Quaternion quaternion = Quaternion.Euler(0f, 0f, 0f);
+            Instantiate(prefab, rifleTransform.position, quaternion);
         }
     }
 }
