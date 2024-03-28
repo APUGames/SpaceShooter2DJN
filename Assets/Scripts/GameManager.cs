@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
             playerDead = true;
         }
 
-        if (playerPoints > playerWinPoints)
+        if (playerPoints >= playerWinPoints)
         {
             playerWon = true;
         }

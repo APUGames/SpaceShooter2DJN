@@ -48,6 +48,7 @@ public class EnemyController : MonoBehaviour
         // Debug.Log("collide");
         if (collision != null && collision.gameObject.CompareTag("Bullet"))
         {
+            GameManager.Instance.SetPlayerPoints(1);
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
         }
