@@ -11,6 +11,7 @@ public class EnemySpawnManager : MonoBehaviour
     [SerializeField]
     private float queueTime = 2.0f;
     private float currentQueueTime;
+    private const int MAX_ENEMIES = 10;
 
     // Start is called before the first frame update
     void Start()
