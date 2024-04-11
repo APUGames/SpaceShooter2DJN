@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
+    [SerializeField]
+    private int playerWinPoints;
+
     private bool playerWon = false;
     private bool playerDead = false;
 
@@ -32,6 +35,19 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        HasPlayerWon();
+    }
+
+    private bool HasPlayerWon()
+    {
+        if (!playerWon)
+        {
+            if (playerPoints >= playerWinPoints)
+            {
+                playerWon = true;
+            }
+        }
+        return playerWon;
     }
 
     public void SetPlayerDead()
@@ -62,5 +78,10 @@ public class GameManager : MonoBehaviour
     public int GetPlayerPoints()
     {
         return playerPoints;
+    }
+
+    public int GetPlayerWinPoints()
+    {
+        return playerWinPoints;
     }
 }

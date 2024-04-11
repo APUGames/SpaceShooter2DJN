@@ -9,8 +9,6 @@ public class GameUIController : MonoBehaviour
     private GameObject playerScoreText;
     [SerializeField]
     private GameObject playerWonText;
-    [SerializeField]
-    private int playerWinPoints;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +26,7 @@ public class GameUIController : MonoBehaviour
     {
         bool playerWon = GameManager.Instance.GetPlayerWon();
         int playerPoints = GameManager.Instance.GetPlayerPoints();
+        int playerWinPoints = GameManager.Instance.GetPlayerWinPoints();
 
         playerScoreText.GetComponent<Text>().text = $"{playerPoints}/{playerWinPoints}";
 
